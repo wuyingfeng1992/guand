@@ -1,0 +1,46 @@
+@import "mixin.styl"
+.navheaderWrap
+  padding: 0rem 0.6rem;
+  position fixed
+  left: 0
+  top: 0
+  //right 0
+  width: 100vw;
+  box-sizing border-box
+  background #fefefe;
+  z-index 100
+  //width 100%
+  //background #fefefe;
+.navheaderInner
+  display flex
+  align-items center
+  @media screen and ( max-width 750px){
+    flex-direction:column
+  }
+.navheader
+  display flex
+  justify-content space-between
+  align-content center
+  margin-left 0.6rem
+  height: 1.53rem
+  @media screen and ( min-width 750px){
+    margin-left 2.0rem
+  }
+  height: 100%
+  width 100%
+  .navItem
+    float left
+    cursor pointer
+    .navText
+      height: 1.5rem
+      line-height: 1.5rem
+      font-size: 0.67rem;
+      display: inline-block
+    &:hover
+      color: $main-color
+  .router-link-active
+    color $main-color
+    .navText
+      border-2px($main-color)
+
+

@@ -1,0 +1,50 @@
+//mixin 是混合的意思 一种类似于function的表达式
+//mixin里面是没有点的
+$main-color=#2eac1c;
+$sub-color= #57ff92;
+$normal-color=#333;
+$sel-color=#2eac1c;
+
+border-2px($color)
+  position: relative
+  &:after
+    position: absolute
+    left: 0
+    bottom: 0
+    width: 100%
+    border-top: 1px solid $color
+    content: ''
+
+border-none()
+  &:after
+    display: none
+
+bg-image($url)
+  background-image: url($url+'.png')
+  background-repeat no-repeat
+  background-size:100% 100%
+
+icon-img($w,$h,$iconName)
+  background-image: url('../common/image/'+$iconName+'.png')
+  background-repeat no-repeat
+  background-size:100% 100%
+  width:$w
+  height:$h
+  display: inline-block
+  vertical-align middle
+
+hct()
+  position: absolute
+  left: 50%
+  transform:translateX(-50%)
+
+vct()
+  position: absolute
+  top: 50%
+  transform translateY(-50%)
+
+allct()
+  position: absolute
+  top: 50%
+  left: 50%
+  transform translate(-50%)
